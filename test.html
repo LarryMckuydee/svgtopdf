@@ -1,0 +1,19 @@
+<html>
+<head>
+<script   src="/jquery-3.2.1.min.js"></script>
+</head>
+<body width="300mm" height="300mm">
+<object id="generator" width="200mm" height="200mm" style="border: 1px solid black; height:200mm; width:200mm" crossDomain="anonymous" type="image/svg+xml" data="/Visual-Generator-Shirt-01.svg"></object>
+<script>
+ $(function(){
+
+  $('#generator').on('load',function(){
+     window.svg = $($('#generator')[0].contentDocument);
+     window.svg.css("scale", "0.2");
+     console.log(     window.svg.find('#L_x2F_blue_collar>image'));
+     window.svg.find('#L_x2F_blue_collar>image').css("display", "");
+  });   
+ });
+</script>
+</body>
+</html>
